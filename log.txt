@@ -1,0 +1,10 @@
+commit ef6743e6fcee3708324ff558c6bf8864ed1b559d (HEAD -> main, origin/main, origin/HEAD)
+Author: zhangyuxiang <friedrichzhang02@gmail.com>
+Date:   Mon Nov 24 12:34:37 2025 -0500
+
+    Check Style Task 1.1
+
+commit dba065e06a6a837f73590e39e3cd9f34aa198e22
+Author: zhangyuxiang <friedrichzhang02@gmail.com>
+Date:   Mon Nov 24 12:00:17 2025 -0500
+:
