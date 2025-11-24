@@ -36,26 +36,24 @@ public class StatementPrinter {
         final StringBuilder result = new StringBuilder(
                 "Statement for " + invoice.getCustomer() + System.lineSeparator()
         );
-        final NumberFormat frmt = NumberFormat.getCurrencyInstance(Locale.US);
 
         for (Performance performance : invoice.getPerformances()) {
             final Play play = plays.get(performance.getPlayID());
 
             final int thisAmount = getAmount(performance);
 
-            // ⭐ Task 2.2: 调用抽取好的方法
             volumeCredits += getVolumeCredits(performance, play);
 
             // print line for this order
             result.append(String.format("  %s: %s (%s seats)%n",
                     play.getName(),
-                    frmt.format((double) thisAmount / Constants.CENTS_PER_DOLLAR),
+                    usd(thisAmount),
                     performance.getAudience()));
+
             totalAmount += thisAmount;
         }
 
-        result.append(String.format("Amount owed is %s%n",
-                frmt.format((double) totalAmount / Constants.CENTS_PER_DOLLAR)));
+        result.append(String.format("Amount owed is %s%n", usd(totalAmount)));
         result.append(String.format("You earned %s credits%n", volumeCredits));
 
         return result.toString();
@@ -90,6 +88,11 @@ public class StatementPrinter {
                         String.format("unknown type: %s", play.getType()));
         }
         return amount;
+    }
+
+    private String usd(int amountInCents) {
+        final NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.US);
+        return formatter.format((double) amountInCents / Constants.CENTS_PER_DOLLAR);
     }
 
     private int getVolumeCredits(Performance performance, Play play) {
