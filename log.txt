@@ -1,50 +1,10 @@
-commit ef6743e6fcee3708324ff558c6bf8864ed1b559d (HEAD -> main, origin/main, origin/HEAD)
-Author: zhangyuxiang <friedrichzhang02@gmail.com>
-Date:   Mon Nov 24 12:34:37 2025 -0500
-
-Task 1.1
-
-commit dba065e06a6a837f73590e39e3cd9f34aa198e22
-Author: zhangyuxiang <friedrichzhang02@gmail.com>
-Date:   Mon Nov 24 12:00:17 2025 -0500
-:
-Task 1.2
-commit ef6743e6fcee3708324ff558c6bf8864ed1b559d (origin/main, origin/HEAD)
-Author: zhangyuxiang <friedrichzhang02@gmail.com>
-Date:   Mon Nov 24 12:34:37 2025 -0500
-:
-
-commit 271e329d1041e202a9b96aa7dba7d878598d7b22 (HEAD -> main)
-Author: zhangyuxiang <friedrichzhang02@gmail.com>
-Date:   Mon Nov 24 13:58:46 2025 -0500
-
-Task 2.1
-
-commit 60af0f7b43d931a8e8b68b350bfd277e29da5d41
-Author: zhangyuxiang <friedrichzhang02@gmail.com>
-Date:   Mon Nov 24 13:48:17 2025 -0500
-
-
-commit 4a412b03965eb9d17b4b8f1d40516707af1533a7 (HEAD -> main, origin/main, origin/HEAD)
-Author: zhangyuxiang <friedrichzhang02@gmail.com>
-Date:   Mon Nov 24 14:14:28 2025 -0500
-
-Task 2.2
-
-commit ecdf183c8c99a922cb75183f48fca89cd6f5d015
-Author: zhangyuxiang <friedrichzhang02@gmail.com>
-Date:   Mon Nov 24 14:14:16 2025 -0500
-:
-
-(base) zhangyuxiang@zhangyuangdeMBP refactoring-assignment % git log
-commit 3a9d0c8e2682e58b232ab2419af3b2c57936ca0a (HEAD -> main, origin/main, origin/HEAD)
-Author: zhangyuxiang <friedrichzhang02@gmail.com>
-Date:   Mon Nov 24 14:22:09 2025 -0500
-
-Task 2.3
-
-commit 4a412b03965eb9d17b4b8f1d40516707af1533a7
-Author: zhangyuxiang <friedrichzhang02@gmail.com>
-Date:   Mon Nov 24 14:14:28 2025 -0500
-
-Task 2.4
+e3b298a Commit Task 2.4
+b31641c Commit Task 2.4
+3a9d0c8 Commit Task 2.3
+4a412b0 Commit Task 2.2
+ecdf183 Commit Task 2.2
+271e329 Commit Task 2.1
+60af0f7 Commit Task 1.2
+ef6743e Check Style Task 1.1
+dba065e Task 1.1
+3ff47b7 Initial commit
