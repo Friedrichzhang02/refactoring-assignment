@@ -43,15 +43,8 @@ public class StatementPrinter {
 
             final int thisAmount = getAmount(performance);
 
-            // add volume credits
-            volumeCredits += Math.max(
-                    performance.getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0
-            );
-            // add extra credit for every five comedy attendees
-            if ("comedy".equals(play.getType())) {
-                volumeCredits += performance.getAudience()
-                        / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
-            }
+            // ⭐ Task 2.2: 调用抽取好的方法
+            volumeCredits += getVolumeCredits(performance, play);
 
             // print line for this order
             result.append(String.format("  %s: %s (%s seats)%n",
@@ -97,6 +90,21 @@ public class StatementPrinter {
                         String.format("unknown type: %s", play.getType()));
         }
         return amount;
+    }
+
+    private int getVolumeCredits(Performance performance, Play play) {
+        int result = 0;
+
+        result += Math.max(
+                performance.getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0
+        );
+
+        if ("comedy".equals(play.getType())) {
+            result += performance.getAudience()
+                    / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
+        }
+
+        return result;
     }
 
 }

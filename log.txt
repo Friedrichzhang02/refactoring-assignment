@@ -12,3 +12,13 @@ commit ef6743e6fcee3708324ff558c6bf8864ed1b559d (origin/main, origin/HEAD)
 Author: zhangyuxiang <friedrichzhang02@gmail.com>
 Date:   Mon Nov 24 12:34:37 2025 -0500
 :
+
+commit 271e329d1041e202a9b96aa7dba7d878598d7b22 (HEAD -> main)
+Author: zhangyuxiang <friedrichzhang02@gmail.com>
+Date:   Mon Nov 24 13:58:46 2025 -0500
+
+    Commit Task 2.1
+
+commit 60af0f7b43d931a8e8b68b350bfd277e29da5d41
+Author: zhangyuxiang <friedrichzhang02@gmail.com>
+Date:   Mon Nov 24 13:48:17 2025 -0500
