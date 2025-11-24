@@ -30,27 +30,21 @@ public class StatementPrinter {
      * @throws RuntimeException if one of the play types is not known
      */
     public String statement() {
-        int totalAmount = 0;
-        int volumeCredits = 0;
-
         final StringBuilder result = new StringBuilder(
                 "Statement for " + invoice.getCustomer() + System.lineSeparator()
         );
 
+        // ⭐ Task 2.4: 使用查询方法，而不是在 loop 里自己累加
+        final int totalAmount = getTotalAmount();
+        final int volumeCredits = getTotalVolumeCredits();
+
         for (Performance performance : invoice.getPerformances()) {
             final Play play = plays.get(performance.getPlayID());
 
-            final int thisAmount = getAmount(performance);
-
-            volumeCredits += getVolumeCredits(performance, play);
-
-            // print line for this order
             result.append(String.format("  %s: %s (%s seats)%n",
                     play.getName(),
-                    usd(thisAmount),
+                    usd(getAmount(performance)),
                     performance.getAudience()));
-
-            totalAmount += thisAmount;
         }
 
         result.append(String.format("Amount owed is %s%n", usd(totalAmount)));
@@ -106,7 +100,23 @@ public class StatementPrinter {
             result += performance.getAudience()
                     / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
         }
+        return result;
+    }
 
+    private int getTotalAmount() {
+        int result = 0;
+        for (Performance performance : invoice.getPerformances()) {
+            result += getAmount(performance);
+        }
+        return result;
+    }
+
+    private int getTotalVolumeCredits() {
+        int result = 0;
+        for (Performance performance : invoice.getPerformances()) {
+            final Play play = plays.get(performance.getPlayID());
+            result += getVolumeCredits(performance, play);
+        }
         return result;
     }
 

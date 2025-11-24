@@ -34,3 +34,14 @@ commit ecdf183c8c99a922cb75183f48fca89cd6f5d015
 Author: zhangyuxiang <friedrichzhang02@gmail.com>
 Date:   Mon Nov 24 14:14:16 2025 -0500
 :
+
+(base) zhangyuxiang@zhangyuangdeMBP refactoring-assignment % git log
+commit 3a9d0c8e2682e58b232ab2419af3b2c57936ca0a (HEAD -> main, origin/main, origin/HEAD)
+Author: zhangyuxiang <friedrichzhang02@gmail.com>
+Date:   Mon Nov 24 14:22:09 2025 -0500
+
+    Commit Task 2.3
+
+commit 4a412b03965eb9d17b4b8f1d40516707af1533a7
+Author: zhangyuxiang <friedrichzhang02@gmail.com>
+Date:   Mon Nov 24 14:14:28 2025 -0500
